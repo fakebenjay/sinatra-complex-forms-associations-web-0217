@@ -18,7 +18,7 @@ class PetsController < ApplicationController
       @pet.owner = Owner.find(params["pet"]["owner_id"][0].to_i)
     end
     @pet.save
-    redirect to "pets/#{@pet.id}"
+    redirect to "/pets/#{@pet.id}"
   end
 
   get '/pets/:id' do
